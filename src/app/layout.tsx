@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import TanstackClientProvider from "@/components/Queryies/Provider";
+import axios from "axios";
+
+axios.defaults.baseURL = 'https://feed-backend-server.vercel.app';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <TanstackClientProvider>{children}</TanstackClientProvider>
       </body>
     </html>
   );
