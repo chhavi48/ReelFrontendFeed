@@ -8,6 +8,7 @@ interface VideosData {
   user: User;
   videoUrl: string;
   video_pictures: VideoPicture[];
+  video_files:string;
 }
 interface VideoFile {
   id: number;
