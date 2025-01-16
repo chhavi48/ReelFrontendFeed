@@ -8,16 +8,18 @@ interface VideosData {
   user: User;
   videoUrl: string;
   video_pictures: VideoPicture[];
-  video_files:string;
+  video_files: VideoFile[]; 
 }
+
 interface VideoFile {
   id: number;
   quality: string;
   file_type: string;
   width: number | null;
   height: number | null;
-  link: string;
+  link: string; 
 }
+
 interface VideoPicture {
   id: number;
   picture: string;
